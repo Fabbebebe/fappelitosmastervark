@@ -15,3 +15,7 @@ var mwlEl = document.getElementsByClassName("mwl")[0];
 
 armorEl.innerHTML = getRandomInt(1, 8);
 mwlEl.innerHTML = parseInt(randomIntEl[1].innerHTML)/2;
+
+function saveChar() {
+
+}
