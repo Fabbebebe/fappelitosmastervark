@@ -1,0 +1,90 @@
+body {
+    background: #212121;
+    color: white;
+}
+
+#container {
+    padding: 2%;
+}
+
+#container h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-family: Arial;
+    margin-bottom: 5%;
+}
+
+.form span::after {
+    content: ':';
+}
+
+.form input {
+    background: #212121;
+    border: unset;
+    border-bottom: 1px solid white;
+    margin-right: 1%;
+    color: white;
+}
+
+.form input, .form span {
+    margin-top: 2%;
+}
+
+.dynamicContent {
+    position: relative;
+    display: inline-block;
+    border: 1px solid white;
+    width: 40%;
+    height: 100%;
+    margin-top: 2%;
+}
+
+.dynamicContent span, .staticContainer span {
+    display: inline-block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    font-weight: bolder;
+}
+
+.dynamicContent .randomInt {
+    display: inline-block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    font-weight: unset;
+}
+
+.imgContainer {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    top: 0;
+    right: 40%;
+}
+
+.descContainer {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+.descContainer span {
+    margin-top: 10%;
+}
+
+.staticContainer {
+    position: relative;
+    border: 1px solid white;
+    width: 30%;
+    height: 100%;
+    float: right;
+    margin-top: 2%;
+}
+
+.staticContainer .armor,.staticContainer .mwl {
+    font-weight: unset;
+}
