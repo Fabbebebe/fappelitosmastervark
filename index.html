@@ -11,20 +11,22 @@
     <div id="container">
         <h1>För högre betyg i programmeringen</h1>
         <div class="form">
-            <span>NAME</span>
-            <input type="text" name="name">
-            <span>SEX</span>
-            <input type="text" name="haram">
-            <span>AGE</span>
-            <input type="text" name="age">
-            <span>PLAYER</span>
-            <input type="text" name="player">
-            <span>NATIONALITY</span>
-            <input type="text" name="race">
-            <span>CLASS</span>
-            <input type="text" name="class">
-            <span>CULT</span>
-            <input type="text" name="cult">
+            <form class="userForm">
+                <span>NAME</span>
+                <input type="text" name="name">
+                <span>SEX</span>
+                <input type="text" name="haram">
+                <span>AGE</span>
+                <input type="text" name="age">
+                <span>PLAYER</span>
+                <input type="text" name="player">
+                <span>NATIONALITY</span>
+                <input type="text" name="race">
+                <span>CLASS</span>
+                <input type="text" name="class">
+                <span>CULT</span>
+                <input type="text" name="cult">
+            </form>
         </div>
         <div class="dynamicContent">
             <span>STR</span>
@@ -63,6 +65,9 @@
         </div>
         <div class="btnContainer">
             <button class="save" onclick="saveChar();">Save</button>
+            <a id="downloadAnchorElem" style="display:none"></a>
+            <input type="file" class="load">
+            <button class="import" onclick="loadChar()">Import</button>
         </div>
     </div>
 
