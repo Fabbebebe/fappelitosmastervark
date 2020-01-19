@@ -22,12 +22,18 @@ function saveChar() {
     formData.forEach(function(value, key){
         object[key] = value;
     });
+    for(var i = 0; randomIntEl.length > i; i++) {
+        object[randomIntEl[i].previousElementSibling.innerText] = randomIntEl[i].innerText;
+    }
+    object["description"] = document.getElementsByName("description")[0].value;
+    object["armor"] = document.getElementsByClassName("armor")[0].innerHTML;
+    object["mwl"] = document.getElementsByClassName("mwl")[0].innerHTML;
     var json = JSON.stringify(object);
-    console.log(json);
+    console.log(object);
     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(json);
     var dlAnchorElem = document.getElementById('downloadAnchorElem');
     dlAnchorElem.setAttribute("href", dataStr);
-    dlAnchorElem.setAttribute("download", "scene.json");
+    dlAnchorElem.setAttribute("download", document.getElementsByName("name")[0].value + ".json");
     dlAnchorElem.click();
 }
 
@@ -37,6 +43,6 @@ function loadChar() {
     fr.onload = function(e) {
         var result = JSON.parse(e.target.result);
         console.log(result);
-    }
+    };
     fr.readAsText(importedJson.item(0));
 }
